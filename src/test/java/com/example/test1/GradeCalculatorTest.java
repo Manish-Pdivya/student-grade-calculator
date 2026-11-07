@@ -7,24 +7,18 @@ import org.junit.jupiter.api.Test;
 class GradeCalculatorTest {
 
     @Test
-    void testTotal() {
-    	assertEquals(225,
-    	        GradeCalculator.calculateTotal(75, 68, 82));
+    void testGradeA() {
+        assertEquals("A", GradeCalculator.calculateGrade(90));
     }
 
     @Test
-    void testAverage() {
-        assertEquals(75.0,
-                GradeCalculator.calculateAverage(75, 68, 82), 0.001);
+    void testGradeB() {
+        assertEquals("B", GradeCalculator.calculateGrade(80));
     }
 
     @Test
-    void testPass() {
-        assertTrue(GradeCalculator.isPass(75.0));
+    void testGradeC() {
+        assertEquals("C", GradeCalculator.calculateGrade(70));
     }
 
-    @Test
-    void testFail() {
-        assertFalse(GradeCalculator.isPass(35.0));
-    }
 }
